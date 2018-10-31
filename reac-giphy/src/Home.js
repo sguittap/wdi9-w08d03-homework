@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Home.css';
 import HelloWorld from './HelloWorld/HelloWorld'
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="Home">
         <HelloWorld/>
       </div>
     );
   }
 }
 
-export default App;
+export default Home;
