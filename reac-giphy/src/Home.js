@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './Home.css';
 import HelloWorld from './HelloWorld/HelloWorld'
-import Search from './Search/Search'
+import SearchContainer from './SearchContainer/SearchContainer'
 
 class Home extends Component {
   render() {
     return (
       <div className="Home">
         <HelloWorld/>
-        <Search/>
+        <SearchContainer/>
       </div>
     );
   }
