@@ -29,7 +29,8 @@ class SearchContainer extends Component{
             const findGiphy = await fetch(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=UAYOFxd7uw7qANX7fYVu9QjRFkYS1udJ`);
             const findGiphyJSON = await findGiphy.json();
             console.log(findGiphyJSON.data, '<-- Search Results')
-            return findGiphyJSON.data
+            // return findGiphyJSON.data
+            this.setState({results:findGiphyJSON.data})
             
         } catch (err) {
             console.log(err)
@@ -37,14 +38,14 @@ class SearchContainer extends Component{
         }  
     }
 
-    componentDidMount(){
-        this.handleSubmit().then((data) => {
-            this.setState({results:data})
-            console.log(this.state.results,'<--current results')
-        }).catch((err) => {
-            console.log(err);
-        })
-    }
+    // componentDidMount(){
+    //     this.handleSubmit().then((data) => {
+    //         this.setState({results:data})
+    //         console.log(this.state.results,'<--current results')
+    //     }).catch((err) => {
+    //         console.log(err);
+    //     })
+    // }
 
     render(){
         return(
